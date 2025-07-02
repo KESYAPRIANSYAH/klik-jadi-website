@@ -711,6 +711,12 @@ main {
     width: 292px;
     height: 375px;
   }
+  .card-features {
+  height: 850px;
+}
+.card-features-highlight {
+  height: 850px;
+}
   .features {
     padding: 1rem 3rem;
   }
