@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --main-color: #0029ff;
+  --second-color: #ffffffff;
+  --color-secondary: #fba919;
+  --bg-2: #edeef0;
+  --bg-3: #d6ddff;
+  --font-family: 'Poppins', sans-serif;
+  --clr-bg: #f4f7ff;
+  --clr-card: #dbe2ff; /* kotak biru muda seperti mock‑up */
+  --clr-heading: #0f172a;
+  --clr-text: #334155;
+  --radius: 12px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+.banner {
+  width: 100%;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+.items-banner {
+  display: flex;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+}
+.items-banner li {
+  list-style: none;
+  margin: 0 16px;
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+}
+.items-1 {
+  display: none;
+}
+.items-3 {
+  color: var(--color-secondary);
+}
+nav {
+  display: flex;
+  border: 1px solid #0029ff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--second-color);
+}
+.nav-brand img {
+  width: 120px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+.nav-items-1 {
+  display: none;
+}
+.nav-items-2 {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.nav-items-2 li {
+  margin: 0 0.5rem;
+}
+
+.main-nav-items--cta {
+  padding: 8px 18px;
+  background: var(--bg-2);
+  border: 1px solid #0029ff;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+.main-nav-items--cta:hover {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+.toggle-button {
+  display: flex;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+.toggle-button input {
+  position: absolute;
+  width: 35px;
+  height: 28px;
+  opacity: 0;
+  left: 10px;
+  top: -4px;
+  z-index: 2;
+  cursor: pointer;
+}
+.toggle-button__bar {
+  z-index: 1;
+  display: block;
+  background-color: var(--main-color);
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.toggle-button input:checked ~ .toggle-button__bar:nth-child(2) {
+  transform: translateY(8px) rotate(45deg);
+}
+.toggle-button input:checked ~ .toggle-button__bar:nth-child(3) {
+  opacity: 0;
+}
+.toggle-button input:checked ~ .toggle-button__bar:nth-child(4) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.sidebar {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: none;
+  position: fixed;
+  transition: all 0.5s;
+}
+.mobile-nav-item {
+  width: 100%;
+  list-style: none;
+  background-color: var(--bg-2);
+}
+.mobile-nav-item a {
+  text-decoration: none;
+}
+.mobile-nav-items {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  padding: 0 1rem;
+  color: black;
+}
+.mobile-nav-items:hover,
+.mobile-nav-items:active {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+.mobile-nav-items a.active {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+/* Breakpoint TAB */
+@media (min-width: 700px) {
+  nav {
+    padding: 1rem 1rem;
+  }
+  .nav-items-2 li {
+    margin: 0 1rem;
+  }
+  .nav-brand img {
+    width: 182px;
+  }
+
+  .items-1 {
+    display: block;
+  }
+}
+
+.sidebar.active {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .items-banner li {
+    font-size: 1rem;
+  }
+
+  nav {
+    display: flex;
+    border: 1px solid #0029ff;
+    padding: 1.5rem 3rem;
+  }
+
+  .nav-brand img {
+    width: 235px;
+    height: 31px;
+  }
+  .nav-items-1 {
+    display: flex;
+    margin: 0 3rem;
+    list-style: none;
+  }
+  .nav-items-1 li a {
+    margin: 0 1rem;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .nav-items-1 li:hover,
+  .nav-items-1 li:active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+  }
+  .nav-items-1 li .active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+  }
+  .nav-items-2 {
+    width: 100%;
+    align-items: center;
+  }
+
+  .main-nav-items--cta {
+    padding: 8px 25px;
+  }
+  .toggle-button {
+    display: none;
+  }
+}

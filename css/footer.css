@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --main-color: #0029ff;
+  --second-color: #ffffffff;
+  --color-secondary: #fba919;
+  --bg-2: #edeef0;
+  --bg-3: #d6ddff;
+  --font-family: "Poppins", sans-serif;
+  --clr-bg: #f4f7ff;
+  --clr-card: #dbe2ff; /* kotak biru muda seperti mock‑up */
+  --clr-heading: #0f172a;
+  --clr-text: #334155;
+  --radius: 12px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+Footer {
+  background-color: var(--bg-3);
+  padding: 2rem 1.5rem;
+}
+Footer img {
+  width: 150px;
+}
+
+.description-footer {
+  list-style: none;
+  margin-top: 2rem;
+}
+.items-footer {
+  font-size: 18px;
+}
+.items-footers {
+  font-size: 18px;
+  margin-top: 2rem;
+}
+.lainya {
+  list-style: none;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+.lainya a {
+  text-decoration: none;
+}
+.title-lainya {
+  margin: 1rem 0;
+}
+.h5-lainya {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.items-lainya {
+  font-size: 18px;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  color: black;
+}
+.sosmed {
+  margin-top: 2rem;
+  display: flex;
+}
+.sosmed img {
+  width: 30px;
+}
+.copyright {
+  background-color: var(--bg-3);
+  text-align: center;
+  font-size: 12px;
+  margin-top: 2.5rem;
+}
+@media (min-width: 700px) {
+  Footer img {
+    width: 200px;
+    padding-top: 2rem;
+  }
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .description-footer {
+    width: 50%;
+  }
+  .lainya {
+    width: 20%;
+  }
+  .sosmed {
+    width: 20%;
+  }
+  .copyright {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  Footer {
+    padding: 1.5rem 3rem;
+  }
+  .copyright {
+    font-size: 16px;
+  }
+}

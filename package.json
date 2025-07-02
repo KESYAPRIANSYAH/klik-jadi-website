@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "lucide": "^0.525.0"
+  }
+}
