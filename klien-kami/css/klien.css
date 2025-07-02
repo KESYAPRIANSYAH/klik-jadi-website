@@ -100,15 +100,21 @@ main {
     flex-direction: row;
     margin-top: 2rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
-    padding: 1rem 15rem;
+  }
+  .container-card-client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .header-card {
     width: 500px;
   }
   .content-card-web {
     margin-top: 1rem;
+    width: 650px;
   }
   .title-client {
     font-size: 28px;
